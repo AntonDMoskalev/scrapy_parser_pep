@@ -31,7 +31,7 @@ class PepParsePipeline:
         file_name = f'{parser_mode}_{now_formatted}.csv'
         file_path = results_dir / file_name
         with open(file_path, mode='w', encoding='utf-8') as f:
-            f.write('Статус, Количество\n')
+            f.write('Статус,Количество\n')
             for value in self.status_list:
-                f.write(f'{value}, {self.status_list[value]}\n')
-            f.write(f'Total, {self.total}\n')
+                f.write(f'{value},{self.status_list[value]}\n')
+            f.write(f'Total,{self.total}\n')
